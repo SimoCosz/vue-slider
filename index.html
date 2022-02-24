@@ -25,18 +25,13 @@
         </div>
 
       </div>
-      <div class="control-wrapper col-2 p-0">
-        <div class="arrows d-flex flex-column justify-content-between">
-          <span @click='prev()' class="go-up"><i class="fa-solid fa-chevron-up"></i></span>
-          <span @click='next()' class="go-down"><i class="fa-solid fa-chevron-down"></i></span>
+        <div class="control-wrapper col-2 p-0">
+          <span @click='prev()' class="go-up arrows"><i class="fa-solid fa-chevron-up"></i></span>
+          <span @click='next()' class="go-down arrows"><i class="fa-solid fa-chevron-down"></i></span>
+          <div v-for='(item, index) in slide' class="controls">
+            <img class="image" @click='currentSlide = index' :class="index == currentSlide? 'active' : ' ' " :src="item.image" alt="">
+          </div>  
         </div>
-        <div class="control-image">
-          <div v-for='(item, index) in slide' class="controls " :class="index == currentSlide? 'active' : ' ' ">
-            <img class="image" :class="index == currentSlide? 'active' : ' ' " :src="item.image" alt="">
-            </div>  
-        </div>
-
-      </div>
     </div>
 
   </section>

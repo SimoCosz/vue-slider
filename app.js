@@ -49,6 +49,9 @@ const section = new Vue({
       } else {
         this.currentSlide = 0
       }
+    },
+    thumbClick: function(){
+      this.currentSlide == index
     }
   }
 })
