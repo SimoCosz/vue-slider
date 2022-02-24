@@ -16,7 +16,7 @@
       <div class="slide-wrapper col-10 p-0">
 
         <!-- <div v-for='item in slide' class="item" :class="item.isActive == true? 'active' : ' ' "> -->
-        <div v-for='(item, index) in slide' class="item" :class="index == currentSlide? 'active' : ' ' ">
+        <div v-for='(item, index) in slide' class="item" v-on:enter='autoSlide' :class="index == currentSlide? 'active' : ' ' ">
           <img :src="item.image" alt="">
           <div class="description">
           <h6 class="titolo">{{item.title}}</h6>

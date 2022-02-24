@@ -4,7 +4,6 @@ const section = new Vue({
   data:{
 
     currentSlide: 0,
-
     slide: [
       {
         title: 'Svezia',
@@ -32,6 +31,11 @@ const section = new Vue({
         image: 'img/05.jpg',
       },
     ]
+
+  },
+
+  created: function(){
+    this.autoSlide();
   },
 
   methods:{
@@ -52,49 +56,9 @@ const section = new Vue({
     },
     thumbClick: function(){
       this.currentSlide == index
+    },
+    autoSlide: function(){
+      this.intervallo = setInterval(this.next, 3000) 
     }
-  }
+  },
 })
-
-
-
-
-// // CONTROLLO SLIDE
-
-// const itemImage = [...document.getElementsByClassName('item')]
-// itemImage[currentIndex].classList.add('active')
-
-// prev.addEventListener('click', function(){
-//   itemImage[currentIndex].classList.remove('active')
-//   itemControl[currentIndex].classList.remove('active')
-
-//   if( currentIndex > 0){
-//     currentIndex--
-//     itemImage[currentIndex].classList.add('active')
-//     itemControl[currentIndex].classList.add('active')
-//   } else {
-//     currentIndex = slide.length - 1
-//   }
-//   itemImage[currentIndex].classList.add('active')
-//   itemControl[currentIndex].classList.add('active')
-  
-// })
-
-// next.addEventListener('click', function(){
-//   itemImage[currentIndex].classList.remove('active')
-//   itemControl[currentIndex].classList.remove('active')
-  
-//   if (currentIndex < slide.length - 1){
-//     currentIndex++
-//     itemImage[currentIndex].classList.add('active')
-//     itemControl[currentIndex].classList.add('active')
-//   } else {
-//     currentIndex = 0
-//   }
-//   itemImage[currentIndex].classList.add('active')
-//   itemControl[currentIndex].classList.add('active')
-// })
-
-// // ELEMENTO ANTEPRIMA
-// const itemControl = [...document.getElementsByClassName('image')]
-// itemControl[currentIndex].classList.add('active')
