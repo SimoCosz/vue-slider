@@ -15,7 +15,8 @@
     <div class="slider row align-items-center justify-content-center">
       <div class="slide-wrapper col-10 p-0">
 
-        <div v-for='item in slide' class="item" :class="(item.active == true)? active : '' ">
+        <!-- <div v-for='item in slide' class="item" :class="item.isActive == true? 'active' : ' ' "> -->
+        <div v-for='(item, index) in slide' class="item" :class="index == currentSlide? 'active' : ' ' ">
           <img :src="item.image" alt="">
           <div class="description">
           <h6 class="titolo">{{item.title}}</h6>
@@ -30,8 +31,8 @@
           <span class="go-down"><i class="fa-solid fa-chevron-down"></i></span>
         </div>
         <div class="control-image">
-          <div v-for='item in slide' class="controls ">
-            <img class="image" :src="item.image" alt="">
+          <div v-for='(item, index) in slide' class="controls " :class="index == currentSlide? 'active' : ' ' ">
+            <img class="image" :class="index == currentSlide? 'active' : ' ' " :src="item.image" alt="">
             </div>  
         </div>
 

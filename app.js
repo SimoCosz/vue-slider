@@ -2,42 +2,41 @@ const section = new Vue({
   el: 'section',
 
   data:{
+
+    currentSlide: 0,
+
     slide: [
       {
         title: 'Svezia',
         description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
         image: 'img/01.jpg',
-        isActive: 'true',
+        
       },
       {
         title: 'Svizzera',
         description: 'Lorem ipsum',
         image: 'img/02.jpg',
-        isActive: 'false',
       },
       {
         title: 'Gran Bretagna',
         description:   'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
         image: 'img/03.jpg',
-        isActive: 'false',
       },
       {
         title: 'Germania',
         description:   'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
         image: 'img/04.jpg',
-        isActive: 'false',
       },
       {
         title: 'Paradise',
         description:   'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
         image: 'img/05.jpg',
-        isActive: 'false',
       },
     ]
   },
 
   methods:{
-
+    
   }
 })
 
