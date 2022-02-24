@@ -58,7 +58,14 @@ const section = new Vue({
       this.currentSlide == index
     },
     autoSlide: function(){
-      this.intervallo = setInterval(this.next, 3000) 
-    }
+      this.intervallo = setInterval(this.next, 1000) 
+    },
+    stopSlide: function(){
+      clearInterval(this.intervallo)
+    },
   },
 })
+
+
+// const clock = setInterval (nome funzione,3000)
+// clearInterval(clock)
