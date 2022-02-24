@@ -10,7 +10,6 @@ const section = new Vue({
         title: 'Svezia',
         description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
         image: 'img/01.jpg',
-        
       },
       {
         title: 'Svizzera',
@@ -36,50 +35,26 @@ const section = new Vue({
   },
 
   methods:{
-    
+    prev: function(){
+      if (this.currentSlide !==0){
+        this.currentSlide --
+      } else {
+        this.currentSlide = this.slide.length -1
+      }
+
+    },
+    next: function(){
+      if (this.currentSlide !== this.slide.length -1){
+        this.currentSlide ++
+      } else {
+        this.currentSlide = 0
+      }
+    }
   }
 })
 
 
 
-// const slide = [
-//   {
-//     title: 'Svezia',
-//     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-//     image: 'img copia/01.jpg',
-//   },
-//   {
-//     title: 'Svizzera',
-//     description: 'Lorem ipsum',
-//     image: 'img copia/02.jpg',
-//   },
-//   {
-//     title: 'Gran Bretagna',
-//     description:   'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-//     image: 'img copia/03.jpg',
-//   },
-//   {
-//     title: 'Germania',
-//     description:   'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-//     image: 'img copia/04.jpg',
-//   },
-//   {
-//     title: 'Paradise',
-//     description:   'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-//     image: 'img copia/05.jpg',
-//   },
-// ]
-
-
-
-// // VARIABILI
-// let currentIndex = 0
-// const slideWrapper = document.querySelector('.slide-wrapper')
-// const controlImage = document.querySelector('.control-image')
-// const next = document.querySelector('.go-down')
-// const prev = document.querySelector('.go-up')
-
-// // ELEMENTO SLIDE
 
 // // CONTROLLO SLIDE
 

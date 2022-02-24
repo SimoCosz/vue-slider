@@ -27,8 +27,8 @@
       </div>
       <div class="control-wrapper col-2 p-0">
         <div class="arrows d-flex flex-column justify-content-between">
-          <span class="go-up"><i class="fa-solid fa-chevron-up"></i></span>
-          <span class="go-down"><i class="fa-solid fa-chevron-down"></i></span>
+          <span @click='prev()' class="go-up"><i class="fa-solid fa-chevron-up"></i></span>
+          <span @click='next()' class="go-down"><i class="fa-solid fa-chevron-down"></i></span>
         </div>
         <div class="control-image">
           <div v-for='(item, index) in slide' class="controls " :class="index == currentSlide? 'active' : ' ' ">
